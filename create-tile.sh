@@ -3,7 +3,7 @@
 #SBATCH --mem 720G
 #SBATCH -p long,big-mem,normal,express
 source /home/tmorova/.bashrc
-samtools view -b -G2048 -f2 /groups/lackgrp/ll_members/tunc/phd/ana-starrseq-lncap-lacklab/analysis/mapping/starrseq-lncap-lib3-cleaned.bam | \
+samtools view -b -F 3332 -f2 /groups/lackgrp/ll_members/tunc/phd/ana-starrseq-lncap-lacklab/analysis/mapping/starrseq-lncap-lib3-cleaned.bam | \
 samtools sort -@ 15 -m 40G -n - | \
 samtools fixmate -m -r - lncap-lib-fixmated.bam 
 samtools sort -@ 15 -m 40G lncap-lib-fixmated.bam > tmp.bam 
