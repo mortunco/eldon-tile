@@ -1,5 +1,4 @@
 #!/bin/bash
-echo $1 $2
 #$1 input bam
 #$2 target library fragment bed
 samtools view -b -f2 -F3332 $1 | samtools sort -@ 9 -m 10G -n - | \
